@@ -1,0 +1,8 @@
+.quantityPicker button,
+.quantityPicker label {
+  display: inline-block;
+  /* /* border: 1px solid red; */
+}
+.quantityPicker input {
+  width: 2rem;
+}
