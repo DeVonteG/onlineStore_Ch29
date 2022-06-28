@@ -1,5 +1,5 @@
 .product {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: inline-block;
   border-radius: 25px;
   padding: 10px;
@@ -12,4 +12,8 @@
 }
 .product label {
   display: block;
+}
+.btn-primary {
+  background-color: green;
+  margin-top: 1rem;
 }

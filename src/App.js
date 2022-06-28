@@ -11,7 +11,6 @@ function App() {
     <div className="App">
       <Navbar></Navbar>
       <h1>Welcome to Organix</h1>
-
       <Catalog></Catalog>
       <Footer></Footer>
     </div>

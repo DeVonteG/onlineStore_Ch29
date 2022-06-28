@@ -1,4 +1,5 @@
 .footer p {
-  background-color: blueviolet;
+  background-color: rgb(170, 141, 107);
   color: black;
+  height: 5vh;
 }
