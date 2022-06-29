@@ -8,13 +8,13 @@ function Navbar(){
                      <a className="nav-link active" aria-current="page" href="#">Home</a>
                  </li>
                  <li className="nav-item">
-                     <a className="nav-link" href="#">Catalog</a>
+                     <a className="nav-link" >Catalog</a>
                  </li>
                  <li className="nav-item">
-                     <a className="nav-link" href="#">Link</a>
+                     <a className="nav-link" >Link</a>
                  </li>
                  <li className="nav-item">
-                     <a className="nav-link disabled">Disabled</a>
+                     <a className="nav-link">Cart</a>
                  </li>
              </ul> 
         </div>

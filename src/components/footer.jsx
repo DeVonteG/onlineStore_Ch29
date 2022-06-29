@@ -1,6 +1,6 @@
 import "./footer.css";
 
-function Footer(){
+const Footer = ()=>{
     return(
     <div className="footer">
         <p>All copy rights reserved &copy; 2022 DeVonte G </p>
