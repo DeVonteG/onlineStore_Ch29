@@ -8,7 +8,7 @@ const About = ()=> {
         const [visible,setVisible] = useState(false);
         
     const changeVisibility = () =>{
-            setVisible(!visible);
+            setVisible  (!visible);
         // visible=(true);
     };
     return(
