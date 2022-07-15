@@ -1,9 +1,12 @@
 import "./admin.css";
 import {useState} from "react";
+// import { Link } from "react-router-dom";
 
 const Admin=()=>{
     const [coupon, setCoupon]= useState({});
     const [product,setProduct]  = useState({});
+    const [allCoupons,setAllCoupons] = useState([]);
+    const [allProducts,setAllProducts] = useState([]);
     
     const handleCouponChange=(e)=>{
         let name= e.target.name;
@@ -16,14 +19,21 @@ const Admin=()=>{
     };
 
     const saveCoupon=()=>{
-        let copy={...coupon}; 
-
-        let discount= parseFloat(copy.discount);//official way (+copy.discount) most popular
-        copy.discount=discount;
+        let coupon2beSaved={...coupon}; 
+        let discount= parseFloat(coupon2beSaved.discount);//official way (+copy.discount) most popular
+        coupon2beSaved.discount=discount;
         
 
-        console.log(copy);
+        console.log(coupon2beSaved);
+        // todo: send obj to server
+
+        // add it to the state array
+        let copyCoupons=[...allCoupons];
+        copyCoupons.push(coupon2beSaved); //set copyCoupons
+        setAllCoupons(copyCoupons); 
     };
+
+    
     
 
     const handleProductChange=(e)=>{
@@ -42,6 +52,9 @@ const Admin=()=>{
         copy.price=parseFloat(copy.price);
         
         console.log(copy);
+        let copyAllProds=[...allProducts];
+        copyAllProds.push(copy);
+        setAllProducts(copyAllProds);
     };
 
     return(
@@ -79,6 +92,9 @@ const Admin=()=>{
                             <button onClick={saveProduct} className="btn btn-primary">Save Product</button>
                         </div>
                     </div>
+                    <div className="products-list">
+                        <ul>{allProducts.map((prod,index)=> <li key={index}>{prod.title}- ${prod.price} </li>)}</ul>
+                    </div>
 
                 </section>
 
@@ -99,6 +115,11 @@ const Admin=()=>{
                         <div className="my-control">
                             <button onClick={saveCoupon} className="btn btn-primary">Save Coupon</button>
                         </div>
+                    </div>
+                    <div className="coupons-list">
+                        <ul>
+                          {allCoupons.map((coupon,index)=> <li key={index}>{coupon.code} - {coupon.discount}% off</li>)}  
+                        </ul>
                     </div>
                 </section>
             </div>
