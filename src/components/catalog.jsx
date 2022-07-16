@@ -27,12 +27,6 @@ const Catalog = () =>{
                         <Product key={prod.id} data={prod}></Product>)
                     }
                 </div>
-            {/* <Product title= "Test A" price="10.50"></Product>
-            <Product title="Test B" price="11.00"></Product>
-            <Product title="Test C" price="12.50"></Product>
-            <Product title="Test D"price="13.00"></Product>
-            <Product title="Test E" price="14.00"></Product>
-            <Product title="Test F" price="15.00"></Product> */}
         </div>
     );
 }

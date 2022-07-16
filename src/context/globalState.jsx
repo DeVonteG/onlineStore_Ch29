@@ -6,11 +6,11 @@ const GlobalState =(props) =>{
     const [cart, setCart] = useState([]);
     const [user, setUser] = useState({});
 
-    const myAddProduct =(product) =>{
+    const myAddProduct =(prod) =>{
         console.log("Global add prod");
 
         let copyCart = [...cart];
-        copyCart.push(product);
+        copyCart.push(prod);
         setCart(copyCart);
     };
 

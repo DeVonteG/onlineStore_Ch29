@@ -19,7 +19,7 @@ const Product =(props) =>{
     }
     const handleAdd=() =>{
         console.log("add button pressed");
-        globalAddProd(props.title);
+        globalAddProd(props.data);
     };
     return(
         <div className="product">
