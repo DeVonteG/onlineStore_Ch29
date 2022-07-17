@@ -18,8 +18,12 @@ const Product =(props) =>{
         return total.toFixed(2);
     }
     const handleAdd=() =>{
-        console.log("add button pressed");
-        globalAddProd(props.data);
+        
+        let prod4Cart={...props.data};
+        prod4Cart.quantity=quantity;
+        // let prod4Cart={...props.data, quantity:}; same as above code but simplified
+        
+        globalAddProd(prod4Cart);
     };
     return(
         <div className="product">

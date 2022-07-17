@@ -10,7 +10,6 @@ import Cart from "./components/cart";
 import Admin from "./components/admin";
 import GlobalState from "./context/globalState";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import "bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => {
   return (
