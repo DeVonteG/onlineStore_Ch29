@@ -5,9 +5,9 @@
   padding: 7px;
 }
 .product-cart img {
-  height: 150px;
-  width: 50px;
-  flex: 1;
+  height: 17vh;
+  padding: 3px, 10px;
+  flex: 0.7;
 }
 .product-cart .product {
   flex: 1;
