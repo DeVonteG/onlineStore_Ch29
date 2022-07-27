@@ -1,5 +1,6 @@
 import "./admin.css";
 import {useState} from "react";
+import DataService from "../services/dataService";
 // import { Link } from "react-router-dom";
 
 const Admin=()=>{
@@ -46,12 +47,15 @@ const Admin=()=>{
         setProduct(copy); //set copy
     };
 
-    const saveProduct=()=>{
+    const saveProduct= async()=>{
         let copy={...product};
 
         copy.price=parseFloat(copy.price);
         
         console.log(copy);
+
+        let service= new DataService();
+        service.saveProduct(copy);
         let copyAllProds=[...allProducts];
         copyAllProds.push(copy);
         setAllProducts(copyAllProds);
